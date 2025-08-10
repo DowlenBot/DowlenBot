@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DowlenBot.Com - Automated Trading Bot Solutions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom CSS for a subtle gradient on the header, inspired by iOS */
+        .header-gradient {
+            background: linear-gradient(135deg, #6a82fb, #00a896);
+            /* Added a subtle overlay for more depth */
+            position: relative;
+            overflow: hidden; /* Ensure pseudo-element doesn't spill */
+        }
+        .header-gradient::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.05); /* Very subtle white overlay */
+            pointer-events: none; /* Allow clicks through */
+        }
+
+        /* Custom font */
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Changed background to a slightly darker, more active blue-gray */
+            background: linear-gradient(180deg, #e0f2f7, #c1e4f0); /* Soft light blue gradient */
+            min-height: 100vh; /* Ensure full height for background effect */
+        }
+
+        /* Frosted glass effect for cards and sections */
+        .frosted-card {
+            background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent white */
+            backdrop-filter: blur(15px) saturate(1.8); /* Stronger blur and saturation */
+            -webkit-backdrop-filter: blur(15px) saturate(1.8); /* Safari compatibility */
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            /* Deeper, yet diffused shadow */
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3); /* Lighter, more defined border for glass effect */
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            position: relative; /* For potential future layering effects */
+            overflow: hidden;
+        }
+
+        .frosted-card:hover {
+            transform: translateY(-8px); /* More pronounced lift on hover */
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25); /* Even stronger shadow on hover */
+        }
+
+        /* List item styling for all lists by default */
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.75rem; /* Default spacing */
+        }
+        .list-item::before {
+            content: '•'; /* Bullet point */
+            color: #00a896;
+            font-size: 1.25rem;
+            line-height: 1;
+            margin-right: 0.5rem;
+            margin-top: -0.1rem;
+            font-weight: bold; /* Make bullet points stand out more */
+        }
+
+        /* Specific styles for the Support & Customization card */
+        .support-card {
+            background: linear-gradient(135deg, #6a82fb, #00a896); /* Retain the header gradient for this card */
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2); /* Deeper shadow for accent card */
+            border-radius: 1.5rem; /* Explicitly set border-radius */
+            border: 1px solid rgba(255, 255, 255, 0.2); /* A subtle white border on the gradient */
+            padding: 3.5rem 2.5rem; /* Increased vertical padding to make it bigger */
+        }
+        .support-card:hover {
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+        }
+        .support-card .list-item {
+             margin-bottom: 1rem; /* Increased spacing between list items for more air */
+        }
+        .support-card .list-item::before {
+             color: rgba(255, 255, 255, 0.8); /* Lighter bullets on dark background */
+        }
+
+        /* Q&A / Thank You Section - Now with a frosted effect */
+        .qa-section {
+            background-color: rgba(255, 255, 255, 0.7); /* Slightly more opaque for prominence */
+            backdrop-filter: blur(18px) saturate(1.9); /* Even stronger blur for this prominent section */
+            -webkit-backdrop-filter: blur(18px) saturate(1.9);
+            border-radius: 3rem; /* More rounded for a 'notification' feel */
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2); /* Very deep shadow */
+            border: 1px solid rgba(255, 255, 255, 0.4); /* Clearer white border */
+        }
+        .qa-section:hover {
+            transform: translateY(-5px); /* Subtle lift on hover */
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.3); /* Even deeper shadow */
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased leading-relaxed">
+
+    <!-- Header Section -->
+    <header class="header-gradient text-white py-20 px-4 sm:px-6 lg:px-8 text-center rounded-b-3xl shadow-xl">
+        <div class="max-w-4xl mx-auto relative z-10"> <!-- Added relative z-10 to keep content above pseudo-element -->
+            <h1 class="text-5xl sm:text-6xl font-extrabold mb-4 rounded-xl">DowlenBot.Com</h1>
+            <p class="text-xl sm:text-2xl opacity-90 mb-8 rounded-lg">Automated Trading Bot Solutions for Retail Traders</p>
+            <p class="text-lg opacity-80 max-w-2xl mx-auto rounded-lg">
+                We build and configure advanced algorithmic trading bots to help traders automate strategies, improve consistency, and optimize profits.
+            </p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+        <!-- Why Automated Trading? & How Our Bots Work -->
+        <section class="grid md:grid-cols-2 gap-8 mb-16">
+            <div class="frosted-card">
+                <h2 class="text-3xl font-bold mb-6 text-gray-900">Why Automated Trading?</h2>
+                <ul class="space-y-3">
+                    <li class="list-item">Removes emotional bias</li>
+                    <li class="list-item">Trades 24/7 without fatigue</li>
+                    <li class="list-item">Executes strategies instantly</li>
+                    <li class="list-item">Backtested & optimized for performance</li>
+                </ul>
+            </div>
+            <div class="frosted-card">
+                <h2 class="text-3xl font-bold mb-6 text-gray-900">How Our Bots Work</h2>
+                <p class="text-lg text-gray-700 leading-relaxed rounded-md">
+                    Our bots use a combination of technical indicators and risk management features to identify trading opportunities and manage trades.
+                </p>
+            </div>
+        </section>
+
+        <!-- Screenshots Section -->
+        <section class="mb-16">
+            <h2 class="text-4xl font-extrabold text-center mb-12 text-gray-900 rounded-lg">See DowlenBot in Action</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="flex flex-col items-center frosted-card p-6"> <!-- Apply frosted-card to screenshot containers too -->
+                    <img src="https://placehold.co/400x250/C8E6C9/388E3C?text=TradingView+Chart" alt="TradingView Chart Overview" class="w-full h-auto object-cover rounded-xl shadow-lg mb-4">
+                    <p class="text-center text-lg font-medium text-gray-700">
+                         TradingView Chart Overview</p>
+                </div>
+                <div class="flex flex-col items-center frosted-card p-6">
+                    <img src="https://placehold.co/400x250/BBDEFB/1976D2?text=Bot+Trade+Signals" alt="Bot Trade Signals" class="w-full h-auto object-cover rounded-xl shadow-lg mb-4">
+                    <p class="text-center text-lg font-medium text-gray-700">Bot Trade Signals</p>
+                </div>
+                <div class="flex flex-col items-center frosted-card p-6">
+                    <img src="https://placehold.co/400x250/E1BEE7/7B1FA2?text=Performance+Analysis" alt="Bot Performance Analysis" class="w-full h-auto object-cover rounded-xl shadow-lg mb-4">
+                    <p class="text-center text-lg font-medium text-gray-700">Bot Performance Analysis</p>
+                </div>
+            </div>
+
+            <div class="frosted-card mt-12 max-w-lg mx-auto">
+                <h3 class="text-2xl font-bold mb-4 text-gray-900">Bot Performance Analysis</h3>
+                <div class="grid grid-cols-2 gap-y-2 text-lg text-gray-700">
+                    <div>Net Profit:</div><div class="text-right font-semibold">$2,783.50</div>
+                    <div>Max Drawdown:</div><div class="text-right font-semibold">$178.30</div>
+                    <div>Total Trades:</div><div class="text-right font-semibold">20</div>
+                    <div>Winning Trades:</div><div class="text-right font-semibold">15</div>
+                    <div>Losing Trades:</div><div class="text-right font-semibold">5</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Onboarding & Setup -->
+        <section class="grid md:grid-cols-2 gap-8 mb-16">
+            <div class="frosted-card">
+                <h2 class="text-3xl font-bold mb-6 text-gray-900">Client Onboarding & Setup</h2>
+                <ul class="space-y-3">
+                    <li class="list-item">Open broker account (Alpaca, Interactive Brokers)</li>
+                    <li class="list-item">Connect API keys to bot platform</li>
+                    <li class="list-item">Configure bot settings (risk %, trading hours)</li>
+                    <li class="list-item">Monitor and optimize performance</li>
+                </ul>
+            </div>
+            <!-- This card now has a distinct class for its gradient, keeping the frosted effect on others -->
+            <div class="card support-card text-white">
+                <h2 class="text-3xl font-bold mb-6">Support & Customization</h2>
+                <ul class="space-y-3">
+                    <li class="list-item">Ongoing client support</li>
+                    <li class="list-item">Custom bot adjustments based on client goals</li>
+                    <li class="list-item">Educational resources and alerts setup</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Q&A / Thank You Section - Now with a frosted effect -->
+        <section class="qa-section text-gray-800 py-16 px-4 sm:px-6 lg:px-8 text-center rounded-3xl">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-4xl sm:text-5xl font-extrabold mb-6 rounded-lg">Q&A / Thank You</h2>
+                <p class="text-xl sm:text-2xl opacity-90 leading-relaxed rounded-lg">
+                    We're here to answer all your questions and guide you through your automated trading journey.
+                    Thank you for considering DowlenBot.Com for your trading needs!
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white py-12 px-4 sm:px-6 lg:px-8 text-center mt-16 rounded-t-3xl">
+        <p class="text-lg opacity-80 rounded-md">&copy; 2025 DowlenBot.Com. All rights reserved.</p>
+        <p class="text-sm opacity-70 mt-2 rounded-md">Designed with a touch of iOS 26 beta elegance.</p>
+    </footer>
+
+</body>
+</html>
